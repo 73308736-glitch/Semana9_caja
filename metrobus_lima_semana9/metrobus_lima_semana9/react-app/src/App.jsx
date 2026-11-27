@@ -39,7 +39,7 @@ function Home(){
   {tag:'MUÉVETE CON LIBERTAD',a:'Tu ciudad.',b:'Tu ritmo.',c:'Tu próximo destino.',desc:'Descubre rutas, conecta con nuevos lugares y administra tus viajes desde una sola plataforma.'},
   {tag:'CADA CONEXIÓN CUENTA',a:'Menos vueltas.',b:'Más camino.',c:'Más tiempo para ti.',desc:'Encuentra una forma más sencilla de organizar tus recorridos por la ciudad.'},
   {tag:'TU VIAJE EMPIEZA AQUÍ',a:'Planea hoy.',b:'Viaja mejor.',c:'Llega más lejos.',desc:'Consulta nuestras líneas, conoce los servicios y mantén tu tarjeta siempre lista.'},
-  {tag:'LIMA EN MOVIMIENTO',a:'Una ciudad.',b'Mil destinos.',c:'Una mejor conexión.',desc:'MetroBus reúne información y herramientas para acompañarte en cada trayecto.'}
+  {tag:'LIMA EN MOVIMIENTO',a:'Una ciudad.',b:'Mil destinos.',c:'Una mejor conexión.',desc:'MetroBus reúne información y herramientas para acompañarte en cada trayecto.'}
  ];
  const [active,setActive]=useState(0);
  useEffect(()=>{const timer=setInterval(()=>setActive(v=>(v+1)%slides.length),5200);return()=>clearInterval(timer)},[]);
