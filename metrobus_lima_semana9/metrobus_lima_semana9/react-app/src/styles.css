@@ -359,3 +359,20 @@ html{scroll-behavior:smooth}
  .journey-grid,.cta-inner,.footer-grid,.hero-grid,.inner-hero-grid,.how-hero-grid,.topup-hero-inner,.contact-hero-inner{width:calc(100% - 30px)}
  .home-services .feature-grid,.services-content .services-showcase{grid-template-columns:1fr}
 }
+
+
+/* Fondo continuo de borde a borde para todas las vistas */
+html,body,#root,.app-shell{width:100%;min-height:100%;margin:0;background:#f3f7fc}
+body{overflow-x:hidden}
+.app-shell{min-height:100vh}
+main,.inner-page,.topup-page,.contact-page,.page,.home-services,.journey-section,.route-explorer,.route-tip,.how-content,.topup-main,.contact-main,.dashboard-page{max-width:none}
+.inner-page,.topup-page,.contact-page,.page{width:100%;background:linear-gradient(180deg,#f2f6fb 0%,#f7f9fc 62%,#edf4fa 100%)}
+.home-services{width:100%;background:linear-gradient(180deg,#f7f9fc 0%,#f0f6fc 100%)}
+.journey-section{width:100%;background:radial-gradient(ellipse at 85% 55%,#e2f8f5 0%,transparent 38%),linear-gradient(120deg,#edf5ff,#f8fbff)}
+.services-content,.route-explorer,.route-tip,.how-content,.topup-main,.contact-main{width:100%;background:linear-gradient(180deg,#f3f7fc 0%,#edf5fb 100%)}
+.inner-hero,.topup-hero,.contact-hero{width:100%}
+.page.container,.dashboard-page.container{width:100%;max-width:none}
+.page.container{padding-left:clamp(24px,7vw,120px);padding-right:clamp(24px,7vw,120px)}
+/* El contenido conserva lectura cómoda, mientras el color de fondo llega hasta los bordes */
+.inner-hero-grid,.topup-hero-inner,.contact-hero-inner,.services-content>.container,.how-content>.container,.route-explorer>.container,.route-tip>.container{max-width:1360px}
+@media(min-width:1600px){.inner-hero-grid,.topup-hero-inner,.contact-hero-inner,.journey-grid,.cta-inner,.footer-grid{max-width:1480px}}
