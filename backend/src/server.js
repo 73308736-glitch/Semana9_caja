@@ -82,7 +82,7 @@ app.post('/api/recargas', auth, async (req, res) => {
     const { numero_tarjeta, monto, tarjeta_nueva = false, pase_universitario = false, canal_pago = 'pasarela' } = req.body || {};
     const amount = Number(monto);
     if (!Number.isFinite(amount) || amount < 1 || amount > 500) return res.status(400).json({ error: 'El monto debe estar entre S/ 1 y S/ 500.' });
-    if (!numero_tarjeta || !/^\\d{10}$/.test(String(numero_tarjeta))) return res.status(400).json({ error: 'El número de tarjeta debe contener exactamente 10 dígitos.' });
+    if (!numero_tarjeta || !/^\d{10}$/.test(String(numero_tarjeta))) return res.status(400).json({ error: 'El número de tarjeta debe contener exactamente 10 dígitos.' });
     if (!['pasarela', 'caja'].includes(canal_pago)) return res.status(400).json({ error: 'Canal de pago no válido.' });
     const code = 'MB-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
     const rows = await sql()`INSERT INTO recargas_tarjeta
@@ -200,7 +200,7 @@ app.get('/api/admin/usuarios', auth, allow('administrador'), async (_req, res) =
 app.post('/api/admin/usuarios', auth, allow('administrador'), async (req, res) => {
   try {
     const { nombre, correo, contrasena, rol='empleado', turno='manana' } = req.body || {};
-    if (!nombre?.trim() || !/^\\S+@\\S+\\.\\S+$/.test(correo || '') || !contrasena || contrasena.length < 8)
+    if (!nombre?.trim() || !/^\S+@\S+\\.\S+$/.test(correo || '') || !contrasena || contrasena.length < 8)
       return res.status(400).json({ error: 'Completa nombre, correo válido y contraseña de al menos 8 caracteres.' });
     if (!['empleado','cajero'].includes(rol) || !['manana','tarde','noche'].includes(turno))
       return res.status(400).json({ error: 'Rol o turno no permitido.' });
