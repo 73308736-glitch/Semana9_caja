@@ -376,3 +376,64 @@ main,.inner-page,.topup-page,.contact-page,.page,.home-services,.journey-section
 /* El contenido conserva lectura cómoda, mientras el color de fondo llega hasta los bordes */
 .inner-hero-grid,.topup-hero-inner,.contact-hero-inner,.services-content>.container,.how-content>.container,.route-explorer>.container,.route-tip>.container{max-width:1360px}
 @media(min-width:1600px){.inner-hero-grid,.topup-hero-inner,.contact-hero-inner,.journey-grid,.cta-inner,.footer-grid{max-width:1480px}}
+
+
+/* Identidad visual MetroBus: paleta cálida, urbana y menos uniforme */
+:root{--navy:#153b3d;--blue:#d46b43;--cyan:#4b9a83;--muted:#66736e;--line:#d9d7ca}
+body,#root,.app-shell{background:#eeeae0;color:#203b39}
+.topbar{background:#f7f3e9ed;border-bottom:1px solid #dcd8ca;box-shadow:0 4px 18px #243c3510}
+.brand{color:#153b3d}.brand-icon{background:#153b3d}.brand-accent{color:#d46b43}
+.nav-links{color:#536660}.nav-links a.active,.nav-links a:hover{color:#c65f39}.nav-login{background:#fffaf0;border-color:#d7d1c1;color:#153b3d}
+.btn-primary{background:#c9633f;color:#fff;box-shadow:0 8px 20px #b65a3830}.btn-primary:hover{background:#ae4f31}.btn-ghost{border-color:#ffffff65}
+.hero{background:radial-gradient(ellipse at 76% 30%,#285e58 0%,transparent 38%),linear-gradient(120deg,#102f35,#17464a 65%,#245a53)}
+.hero:before{border-color:#d7c39b22;box-shadow:0 0 0 75px #d7c39b0c,0 0 0 150px #d7c39b07}
+.hero h1 em{color:#e8a276}.hero .eyebrow{color:#e8c5a8}.hero-copy>p{color:#d0d9cf}
+.hero-art .art-glow{background:#b76c4730}.route-line{border-color:#d6a77b88}.route-line i{border-color:#e6a27a;background:#17464a}
+.bus-visual{border-bottom-color:#d46b43}.floating-card{background:#f9f3e7;color:#183b3b}
+.stats{background:#f8f4e9;border-bottom-color:#dcd7c8}.stats strong{color:#173c3b}.stat-icon{background:#e7e4d7}
+.home-services{background:linear-gradient(135deg,#e9e4d7 0%,#f1ecdf 52%,#e4e8dc 100%)}
+.home-services .section-heading h2 em,.section-heading h2 em{color:#c9633f}
+.home-services .feature-card{background:#faf6eb;border:1px solid #d8d3c3;box-shadow:0 7px 18px #263c3210;border-radius:12px}
+.home-services .feature-card:nth-child(2){background:#e4eee5}
+.home-services .feature-card:nth-child(3){background:#f4e6d9}
+.home-services .feature-card:nth-child(4){background:#e5e9df}
+.feature-icon{background:#f3dfcf;color:#b75a38}.feature-card h3{color:#183b3a}.feature-card p{color:#65736c}.feature-arrow{color:#c16a47}
+.feature-card:hover{box-shadow:0 16px 28px #263c3220;border-color:#c8bda9}
+.journey-section{background:radial-gradient(ellipse at 82% 50%,#32665d 0%,transparent 38%),linear-gradient(115deg,#173d40,#214e4b);color:#f7f1e4}
+.journey-section .eyebrow{color:#e5a17a}.journey-section h2{color:#fff7e9}.journey-section h2 em{color:#e7a078}.journey-section p{color:#d1ded4}
+.journey-section .journey-step,.journey-section .journey-item,.journey-section .step-card{background:#f6f0e4;border-color:#d9d1bf;color:#183b3a}
+.journey-section .journey-step p,.journey-section .journey-item p,.journey-section .step-card p{color:#68756d}
+.journey-section .btn-primary{background:#d46b43}
+.inner-page,.topup-page,.contact-page{background:#eeeae0}
+.inner-hero{background:radial-gradient(ellipse at 82% 50%,#2c6158 0%,transparent 35%),linear-gradient(115deg,#14373b,#1c4a49);color:#fff}
+.inner-hero h1,.topup-hero h1,.contact-hero h1{color:#fff}.inner-hero h1 em,.topup-hero h1 em,.contact-hero h1 em{color:#e8a078}
+.inner-hero p,.topup-hero p,.contact-hero p{color:#d1ddd5}
+.inner-hero .eyebrow,.topup-hero .eyebrow,.contact-hero .eyebrow{color:#e8b995}
+.inner-hero .btn-ghost{border-color:#ffffff70;color:#fff}
+.services-content{background:linear-gradient(140deg,#eee8da,#e3e9dd);padding-top:72px;padding-bottom:78px}
+.services-content .section-heading h2 em{color:#c9633f}
+.service-tile{border-radius:13px;box-shadow:0 10px 24px #1b3b3212;border:1px solid #d6d2c3}
+.service-tile.blue{background:#f8f2e6;color:#173b3b}.service-tile.mint{background:#e1ece2;color:#173b3b}.service-tile.violet{background:#f2e4d8;color:#173b3b}.service-tile.dark{background:#1a4546;color:#fff}
+.service-tile p{color:#66746d}.service-tile.dark p{color:#c8d8cf}.service-tile-icon{background:#f0ddcc;color:#bd603c}.service-tile.dark .service-tile-icon{background:#315f58;color:#f1b08b}
+.service-link{color:#bd603c}.service-tile.dark .service-link{color:#f2b18c}
+.service-banner{background:linear-gradient(110deg,#c9633f,#a84e35);color:#fff}.service-banner .eyebrow{color:#f7d5bd}.service-banner h2 em{color:#f4c19d}.service-banner p{color:#f8e2d5}.service-banner .btn-light{background:#f8f1e5;color:#173b3b}
+.routes-page .route-explorer,.how-page .how-content{background:linear-gradient(135deg,#e6e9dc,#f2eddf);padding-top:70px;padding-bottom:75px}
+.route-card,.route-map-card,.how-detail,.how-step{background:#fbf6eb;border-color:#d9d3c3}
+.route-card{box-shadow:0 7px 18px #203d3510}.route-card p,.route-detail p{color:#66736c}
+.route-tip{background:#dfe9df;border-color:#cbd9cc;border-radius:14px;padding:22px 26px}
+.route-tip-icon{background:#c7ddd0;color:#245b50}
+.how-title h2 em{color:#c9633f}.how-step.active{background:#1b4948;color:#fff}.how-step.active small{color:#d4e1d8}
+.how-detail{box-shadow:0 12px 28px #203d3512}.how-detail h3{color:#173b3b}.how-tip{background:#e4eee3;color:#31594f}
+.topup-hero,.contact-hero{background:radial-gradient(ellipse at 78% 48%,#315e54 0%,transparent 38%),linear-gradient(115deg,#14373b,#204d49)}
+.topup-main,.contact-main{background:linear-gradient(135deg,#e8e4d8,#f1ecdf);padding-top:70px;padding-bottom:78px}
+.topup-form-card,.contact-form-card{background:#fbf6eb;border:1px solid #d8d1c0;border-radius:16px;box-shadow:0 16px 35px #213b3212}
+.topup-form-heading h2,.contact-form-heading h2,.contact-info h2{color:#173b3b}.topup-form-heading h2 em,.contact-form-heading h2 em,.contact-info h2 em{color:#c9633f}
+.topup-aside-card{background:#e0e9dd;border:1px solid #cedbcd}.topup-aside-card.dark{background:#173f41;color:#fff}.topup-aside-card.dark p{color:#d1ddd5}.topup-aside-card.dark .eyebrow{color:#e7ad88}.topup-aside-card a{color:#b95737}
+.contact-info{color:#29463f}.contact-info>p{color:#69766e}.contact-info-item{background:#f8f2e6;border:1px solid #d9d2c2}.contact-info-item>span{background:#e9d9c9;color:#b95d3b}.contact-info-note{background:#dce9df;color:#365d50}
+.field input,.field select,.field textarea{background:#fffdf7;border-color:#d6d0c1;color:#203b39}.field input:focus,.field select:focus,.field textarea:focus{border-color:#c96b47;box-shadow:0 0 0 3px #c9633f1a}
+.auth-scene{background:radial-gradient(ellipse at 10% 15%,#dce8d9 0,transparent 38%),radial-gradient(ellipse at 92% 85%,#ead9c9 0,transparent 35%),#eeeae0}
+.auth-card.auth-card-motion,.auth-card{background:#fbf6eb;border-color:#d8d1c0}.auth-card.auth-card-motion h1,.auth-card h1{color:#173b3b}
+.dashboard-page{background:#eeeae0}.dashboard-metric,.dashboard-profile,.dashboard-table{background:#fbf6eb;border-color:#d9d2c2}.dashboard-metric>span{background:#e9ddce;color:#b95d3b}.dashboard-section-heading h2{color:#173b3b}
+.footer{background:#102f32;color:#d1ddd5}.footer-brand{color:#fff}.footer p{color:#afc4b8}.footer-bottom{border-color:#ffffff22;color:#8fa99c}
+.page{background:linear-gradient(135deg,#eee9dc,#e3e9df);color:#203b39}.table-wrap{background:#fbf6eb;border-color:#d8d1c0}th{background:#e8e6d9;color:#536b61}td{border-color:#e4dece}
+@media(max-width:680px){.home-services{padding-top:48px;padding-bottom:48px}.journey-section{padding-top:48px;padding-bottom:48px}.services-content,.routes-page .route-explorer,.how-page .how-content,.topup-main,.contact-main{padding-top:46px;padding-bottom:50px}}
