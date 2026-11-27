@@ -325,3 +325,37 @@ html{scroll-behavior:smooth}
 @media(max-width:850px){.auth-layout{grid-template-columns:1fr;max-width:530px}.auth-showcase{min-height:310px;padding:24px 27px}.auth-showcase-copy{margin:30px 0 5px}.auth-showcase-copy h2{font-size:32px}.auth-visual{height:150px}.auth-visual-orbit{width:130px;height:130px}.auth-showcase-foot{display:none}.auth-card.auth-card-motion{min-height:0;padding:32px 28px}.dashboard-welcome{grid-template-columns:1fr .65fr;padding:28px}.dashboard-metrics{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:580px){.auth-scene{padding:24px 13px 35px}.auth-layout{border-radius:17px}.auth-showcase{min-height:285px;padding:21px}.auth-showcase-copy{margin:22px 0 0}.auth-showcase-copy h2{font-size:28px}.auth-visual{height:120px}.auth-floating{padding:8px}.auth-float-one{left:-6px}.auth-float-two{right:-6px}.auth-card.auth-card-motion{padding:27px 21px}.dashboard-page{padding-top:25px}.dashboard-welcome{grid-template-columns:1fr;padding:25px 21px}.dashboard-welcome-art{height:190px}.dashboard-welcome h1{font-size:37px}.dashboard-actions{flex-wrap:wrap;gap:13px}.dashboard-metrics{gap:8px}.dashboard-metric{padding:13px 10px;grid-template-columns:32px 1fr;column-gap:8px}.dashboard-metric>span{width:31px;height:31px}.dashboard-metric strong{font-size:19px}.dashboard-section-heading{align-items:start;gap:10px;flex-direction:column}.dashboard-profile{flex-wrap:wrap}.dashboard-profile>a{margin-left:58px}}
 @media(prefers-reduced-motion:reduce){.auth-layout,.auth-showcase-copy,.auth-card-motion,.auth-visual-orbit,.auth-mini-bus,.auth-floating,.auth-live-dot,.auth-spinner,.dashboard-page,.dashboard-ring,.dashboard-pass{animation:none!important;transition:none!important}}
+
+
+/* Ajuste global de anchura: secciones a todo el viewport y contenido amplio */
+.container{width:min(1360px,calc(100% - 72px));max-width:1360px;margin-left:auto;margin-right:auto}
+@media(min-width:1500px){.container{width:min(1440px,calc(100% - 100px));max-width:1440px}}
+/* Las secciones que antes estaban limitadas por la clase container ahora ocupan todo el ancho */
+.home-services.container,.services-content.container,.route-explorer.container,.route-tip.container,.how-content.container,.topup-main.container,.contact-main.container,.dashboard-page.container,.page.container{
+ width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:clamp(28px,7.5vw,132px);padding-right:clamp(28px,7.5vw,132px)
+}
+.home-services.container{background:#f7f9fc}
+.services-content.container,.how-content.container{background:linear-gradient(180deg,#f5f8fc 0%,#eef5fb 100%)}
+.route-explorer.container,.route-tip.container{background:#f5f8fc}
+.topup-main.container,.contact-main.container{background:linear-gradient(180deg,#f2f6fb 0%,#f8fafc 100%)}
+.dashboard-page.container,.page.container{background:linear-gradient(180deg,#f4f8fc 0%,#fff 100%)}
+.journey-grid,.cta-inner,.footer-grid,.hero-grid,.inner-hero-grid,.how-hero-grid,.topup-hero-inner,.contact-hero-inner{width:min(1360px,calc(100% - 72px));margin-left:auto;margin-right:auto}
+.home-services .feature-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.home-services .feature-card{min-height:230px;padding:28px}
+.services-content .services-showcase{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.route-explorer .route-panel{width:100%}
+.how-content .how-workflow{max-width:1360px}
+.topup-main,.contact-main{gap:30px}
+.dashboard-page .dashboard-welcome,.dashboard-page .dashboard-metrics,.dashboard-page .dashboard-content,.dashboard-page .dashboard-profile{max-width:1360px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){
+ .container{width:calc(100% - 40px)}
+ .home-services.container,.services-content.container,.route-explorer.container,.route-tip.container,.how-content.container,.topup-main.container,.contact-main.container,.dashboard-page.container,.page.container{padding-left:24px;padding-right:24px}
+ .journey-grid,.cta-inner,.footer-grid,.hero-grid,.inner-hero-grid,.how-hero-grid,.topup-hero-inner,.contact-hero-inner{width:calc(100% - 40px)}
+ .home-services .feature-grid,.services-content .services-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .container{width:calc(100% - 30px)}
+ .home-services.container,.services-content.container,.route-explorer.container,.route-tip.container,.how-content.container,.topup-main.container,.contact-main.container,.dashboard-page.container,.page.container{padding-left:16px;padding-right:16px}
+ .journey-grid,.cta-inner,.footer-grid,.hero-grid,.inner-hero-grid,.how-hero-grid,.topup-hero-inner,.contact-hero-inner{width:calc(100% - 30px)}
+ .home-services .feature-grid,.services-content .services-showcase{grid-template-columns:1fr}
+}
