@@ -1,3 +1,3 @@
 # Componentes reutilizables
 
-Carpeta destinada a componentes compartidos de interfaz. El componente de navegación y los elementos de presentación actuales se conservan en `src/App.jsx` durante esta reorganización estructural.
+Los componentes visuales compartidos viven aquí. `Feature.jsx` contiene las tarjetas de funcionalidades usadas en las secciones de inicio y servicios. Se mantiene la misma estructura visual y las mismas clases CSS.
