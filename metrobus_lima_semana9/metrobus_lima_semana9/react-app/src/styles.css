@@ -437,3 +437,94 @@ body,#root,.app-shell{background:#eeeae0;color:#203b39}
 .footer{background:#102f32;color:#d1ddd5}.footer-brand{color:#fff}.footer p{color:#afc4b8}.footer-bottom{border-color:#ffffff22;color:#8fa99c}
 .page{background:linear-gradient(135deg,#eee9dc,#e3e9df);color:#203b39}.table-wrap{background:#fbf6eb;border-color:#d8d1c0}th{background:#e8e6d9;color:#536b61}td{border-color:#e4dece}
 @media(max-width:680px){.home-services{padding-top:48px;padding-bottom:48px}.journey-section{padding-top:48px;padding-bottom:48px}.services-content,.routes-page .route-explorer,.how-page .how-content,.topup-main,.contact-main{padding-top:46px;padding-bottom:50px}}
+
+
+/* METROBUS 2026 — paleta urbana coherente: navy, azul eléctrico y turquesa */
+:root{
+ --navy:#09243d;--blue:#1769e8;--cyan:#18b7ad;--muted:#62758b;--line:#d8e3ef;
+ --surface:#f4f7fb;--paper:#ffffff;--ink:#102b46;
+}
+html,body,#root,.app-shell{background:var(--surface);color:var(--ink)}
+.topbar{background:#fff;border-bottom:1px solid #e2eaf2;box-shadow:0 5px 22px #09243d0b}
+.brand,.brand-accent{color:var(--navy)}.brand-icon{background:var(--navy)}
+.nav-links a.active,.nav-links a:hover{color:var(--blue)}
+.nav-links a:not(.nav-login):after{background:var(--cyan)}
+.nav-login{background:#fff;border:1px solid #d7e3f0;color:var(--navy)}
+.btn-primary{background:linear-gradient(110deg,#1769e8,#1457c8);color:white;box-shadow:0 9px 22px #1769e833}
+.btn-primary:hover{background:linear-gradient(110deg,#0e58cf,#0b48ae);transform:translateY(-2px)}
+.btn-ghost{border-color:#ffffff70;color:inherit}
+.hero-v2,.inner-hero,.topup-hero,.contact-hero,.dashboard-welcome{
+ background:radial-gradient(ellipse at 78% 42%,#126a8b 0%,transparent 38%),linear-gradient(118deg,#081f37 0%,#103e63 58%,#075b68 100%);
+}
+.hero-v2 h1 em,.inner-hero h1 em,.topup-hero h1 em,.contact-hero h1 em{color:#50d6ce}
+.hero-copy .eyebrow,.inner-hero .eyebrow,.topup-hero .eyebrow,.contact-hero .eyebrow{color:#75e0d8}
+.hero-copy>p,.inner-hero p,.topup-hero p,.contact-hero p{color:#d2e1ed}
+.hero-orbit,.orbit-dash{border-color:#62d9d044}.route-line{border-color:#53cfc788}
+.route-line i,.map-pin{border-color:#4be0d3}
+.art-glow,.hero-art .art-glow{background:#14b8b040}
+.bus-visual{border-bottom-color:#18b7ad}
+.floating-card{background:#fff;color:#102b46}
+.stats,.stats-v2{background:#fff;border-bottom:1px solid #e0e8f1}
+.stat-icon{background:#eaf2ff;color:#1769e8}
+.home-services{background:linear-gradient(180deg,#f3f7fc,#eaf2f9)}
+.section-heading h2 em,.home-services .section-heading h2 em,.route-panel-head h2 em,.how-title h2 em{color:var(--blue)}
+.feature-card{background:#fff;border:1px solid #dce6f0;box-shadow:0 10px 28px #0c31500b}
+.feature-card:nth-child(2){background:#edf7f7}.feature-card:nth-child(3){background:#eef3ff}.feature-card:nth-child(4){background:#eaf4f2}
+.feature-card h3{color:var(--navy)}.feature-card p,.section-intro{color:#667b91}
+.feature-icon{background:#e7f0ff;color:#1769e8}
+.feature-card:nth-child(2) .feature-icon,.feature-card:nth-child(4) .feature-icon{background:#d9f5f1;color:#079b91}
+.feature-card:hover{border-color:#9bc2f4;box-shadow:0 20px 40px #0c31501a}
+.feature-arrow{color:#1769e8}
+.journey-section{background:radial-gradient(ellipse at 83% 45%,#d5f6f2 0%,transparent 36%),linear-gradient(120deg,#e8f1fc,#f6f9fd 60%,#e2f4f1)}
+.journey-section h2{color:var(--navy)}.journey-section h2 em{color:var(--blue)}
+.journey-section p{color:#62758b}
+.journey-steps .how-step,.journey-section .how-step{background:#fff;border-color:#d7e4f1;color:var(--navy)}
+.inner-page,.topup-page,.contact-page,.page{background:var(--surface)}
+.services-content,.route-explorer,.how-content,.topup-main,.contact-main{background:linear-gradient(180deg,#f2f6fb 0%,#eaf2f9 100%)}
+.services-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}
+.service-tile{background:#fff;border:1px solid #dce7f1;box-shadow:0 10px 28px #0a2b4b0c}
+.service-tile.blue{background:linear-gradient(145deg,#fff,#edf4ff)}
+.service-tile.mint{background:linear-gradient(145deg,#fff,#e5f7f4)}
+.service-tile.violet{background:linear-gradient(145deg,#fff,#edf0ff)}
+.service-tile.dark{background:linear-gradient(145deg,#0a2a47,#10556a);border-color:#1c6075;color:white}
+.service-tile h3{color:var(--navy)}.service-tile p{color:#657b91}.service-tile.dark h3{color:white}.service-tile.dark p{color:#c4d9e5}
+.service-tile-icon{background:#e6f0ff;color:#1769e8}.service-tile.mint .service-tile-icon{background:#d9f5f1;color:#079b91}.service-tile.violet .service-tile-icon{background:#e9eaff;color:#5c67d8}.service-tile.dark .service-tile-icon{background:#1a6174;color:#7ce3dc}
+.service-tag{color:#1769e8}.service-link{color:#1769e8}.service-tile.dark .service-link{color:#68e0d7}
+.service-tile:hover{border-color:#9bc2f4;box-shadow:0 20px 42px #0a2b4b18}
+.service-banner{background:linear-gradient(110deg,#126b8a,#0b3d61);color:white}
+.service-banner .eyebrow{color:#76e0d8}.service-banner h2 em{color:#6be1d8}.service-banner p{color:#d4e4ee}
+.routes-hero .route-summary b{color:#fff}.route-summary span{color:#c2d7e8}
+.route-panel-head h2,.how-title h2{color:var(--navy)}
+.route-search{color:#526d87}.route-search input{background:white;border-color:#d5e2ef}
+.route-select,.route-card,.route-map-card,.how-step,.how-detail{background:#fff;border-color:#dce6f0;color:var(--navy)}
+.route-select:hover,.how-step:hover{border-color:#9bc2f4}
+.route-select.active,.how-step.active{background:linear-gradient(110deg,#0c2e50,#10546a);border-color:#10546a;color:white;box-shadow:0 12px 26px #0b355322}
+.route-select.active .route-select-code,.how-step.active .how-step-num{color:#67e0d6}
+.route-tip,.how-tip{background:#def4f1;border-color:#c3e9e4;color:#155b61}
+.route-tip-icon{background:#c9efeb;color:#078f88}
+.how-step-icon{background:#e8f1ff;color:#1769e8}.how-step.active .how-step-icon{background:#1c6078;color:#72e4dc}
+.how-step-name small{color:#71859a}.how-step.active .how-step-name small{color:#c4d9e5}
+.how-detail{box-shadow:0 14px 34px #0b315012}.how-detail h3{color:var(--navy)}
+.topup-form-card,.contact-form-card{background:#fff;border:1px solid #dce6f0;box-shadow:0 18px 45px #0b315010}
+.topup-form-heading h2,.contact-form-heading h2,.contact-info h2{color:var(--navy)}
+.topup-form-heading h2 em,.contact-form-heading h2 em,.contact-info h2 em{color:var(--blue)}
+.topup-form-heading>p,.contact-form-heading>p,.contact-info>p{color:#687e94}
+.topup-aside-card{background:#e8f2ff;border:1px solid #d2e3f7}
+.topup-aside-card.dark{background:linear-gradient(145deg,#0a2b49,#10586a);color:white}
+.topup-aside-card.dark p{color:#c7dce8}.topup-aside-card.dark .eyebrow{color:#74e0d8}.topup-aside-card a{color:#72e1d9}
+.contact-info-item{background:#fff;border:1px solid #dce6f0}
+.contact-info-item>span{background:#e8f1ff;color:#1769e8}
+.contact-info-note{background:#def4f1;color:#256b69}
+.field input,.field select,.field textarea,.topup-form input,.topup-form select,.contact-form input,.contact-form select,.contact-form textarea{background:#fbfdff;border-color:#d5e1ed;color:#17334f}
+.field input:focus,.field select:focus,.field textarea:focus,.topup-form input:focus,.topup-form select:focus,.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#3987ed;box-shadow:0 0 0 3px #1769e81a}
+.auth-scene{background:radial-gradient(ellipse at 8% 10%,#dcecff 0,transparent 36%),radial-gradient(ellipse at 95% 85%,#d9f5f1 0,transparent 35%),#f2f6fb}
+.auth-card{background:#fff;border-color:#dce6f0}.auth-showcase{background:radial-gradient(ellipse at 78% 62%,#176b91,#0b3154 47%,#071d35 83%)}
+.auth-showcase-copy .eyebrow,.auth-card-top .eyebrow{color:#1769e8}
+.auth-card h1{color:var(--navy)}
+.dashboard-page{background:linear-gradient(180deg,#f2f6fb,#eaf2f9)}
+.dashboard-metric,.dashboard-profile,.dashboard-table{background:#fff;border-color:#dce6f0}
+.dashboard-metric>span{background:#e8f1ff;color:#1769e8}
+.dashboard-section-heading h2{color:var(--navy)}.dashboard-section-heading h2 em{color:var(--blue)}
+.footer{background:#071d35;color:#d2e1ed}.footer-brand{color:#fff}.footer p{color:#adc4d7}.footer-bottom{border-color:#ffffff20;color:#8da9bf}
+.table-wrap{background:#fff;border-color:#dce6f0}th{background:#eaf2fa;color:#36536d}td{border-color:#e4ebf3}
+@media(max-width:700px){.services-showcase{grid-template-columns:1fr}.topup-main,.contact-main{padding-top:42px;padding-bottom:48px}}
