@@ -1,3 +1,3 @@
 # Contexto de aplicación
 
-La sesión actual se inicializa desde el token `mb_token` y se consulta mediante `/api/auth/me`. La carpeta queda preparada para centralizar el contexto de autenticación en una siguiente refactorización.
+Carpeta reservada para centralizar sesión y estado compartido. La sesión actual sigue administrándose en el componente principal para no cambiar el comportamiento durante esta reorganización.
