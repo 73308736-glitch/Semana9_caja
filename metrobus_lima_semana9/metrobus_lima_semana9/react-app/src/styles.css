@@ -221,3 +221,63 @@ html{scroll-behavior:smooth}
  .route-explorer{padding-top:40px}
  .how-content{padding-top:42px;padding-bottom:45px}
 }
+
+
+/* Recargas y contacto: páginas de servicio completas */
+.topup-page,.contact-page{background:#f3f7fc;overflow:hidden}
+.topup-hero,.contact-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 45%,#164f7d,#0b2d4d 48%,#071d35);padding:66px 0 70px}
+.topup-hero:before,.contact-hero:before{content:"";position:absolute;z-index:-1;width:560px;height:560px;border:1px solid #8ac8e52b;border-radius:50%;right:-150px;top:-330px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05}
+.topup-hero-inner,.contact-hero-inner{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+.topup-copy h1,.contact-hero h1{font:800 clamp(42px,5vw,62px)/1.07 Manrope,sans-serif;letter-spacing:-2.8px;color:#fff;margin:22px 0 16px}
+.topup-copy h1 em,.contact-hero h1 em{font-style:normal;color:#57d2c8}
+.topup-copy>p,.contact-hero-inner>div:first-child>p{max-width:520px;color:#c3d6e7;font-size:14px;line-height:1.85}
+.topup-benefits,.contact-hero-points{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px}
+.topup-benefits span,.contact-hero-points span{display:flex;align-items:center;gap:8px;color:#c4d9e9;font-size:11px}
+.topup-benefits svg,.contact-hero-points svg{width:17px;color:#57d2c8}
+.topup-card-art,.contact-hero-art{height:320px;position:relative;display:grid;place-items:center}
+.topup-orbit,.contact-orbit{position:absolute;width:275px;height:275px;border:1px dashed #8ac8e88a;border-radius:50%;animation:orbitSpin 38s linear infinite;box-shadow:0 0 0 32px #ffffff05,0 0 0 65px #ffffff03}
+.metro-card{position:relative;width:310px;height:195px;border-radius:20px;padding:21px 23px;background:linear-gradient(135deg,#f8fcff,#c8dff0 55%,#e9f4fc);box-shadow:0 30px 65px #0005;transform:rotate(-7deg);animation:cardFloat 5s ease-in-out infinite;color:#102e4b}
+.metro-card-head,.metro-card-foot{display:flex;justify-content:space-between;align-items:center;font:800 9px Manrope;letter-spacing:1.4px;color:#55728e}
+.metro-card-head span:last-child{letter-spacing:2px}
+.metro-chip{width:39px;height:29px;border-radius:7px;background:linear-gradient(135deg,#d4b56b,#f5dfa2);margin-top:22px;border:1px solid #b99c59}
+.metro-card-balance{margin-top:10px}.metro-card-balance small,.metro-card-balance b{display:block}.metro-card-balance small{font:800 8px Manrope;letter-spacing:1.5px;color:#6b8297}.metro-card-balance b{font:800 19px/1.1 Manrope;margin-top:6px}
+.metro-card-foot{border-top:1px solid #b9cddd;padding-top:10px;margin-top:12px;font-size:7px}.metro-card-foot svg{width:20px;color:#126bd5}
+.topup-floating-tag,.topup-float-check,.contact-chat-bubble{position:absolute;display:flex;align-items:center;gap:9px;background:#fff;color:#15324e;border-radius:13px;padding:12px 15px;box-shadow:0 15px 35px #0004;font:800 10px Manrope}
+.topup-floating-tag{top:22px;left:0}.topup-floating-tag svg,.contact-chat-bubble svg{width:18px;color:#126bd5}
+.topup-float-check{bottom:25px;right:0}.topup-float-check svg{width:19px;color:#0ca99d}
+.topup-main{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.75fr);gap:22px;padding-top:58px;padding-bottom:72px;align-items:start}
+.topup-form-card,.contact-form-card{background:#fff;border:1px solid #e0e9f2;border-radius:22px;padding:32px;box-shadow:0 18px 50px #153c650b}
+.topup-form-heading h2,.contact-form-heading h2{font:800 27px/1.2 Manrope;color:#0b2541;letter-spacing:-1px;margin:9px 0}
+.topup-form-heading h2 em,.contact-form-heading h2 em,.contact-info h2 em{font-style:normal;color:#176bd4}
+.topup-form-heading>p,.contact-form-heading>p{font-size:12px;color:#7b8fa4;line-height:1.7;margin:0 0 24px}
+.topup-form{gap:17px}.topup-form .field,.contact-form .field{gap:8px}
+.topup-form .field>span,.contact-form .field>span{font-size:11px;font-weight:800;color:#27445f}
+.topup-form input,.topup-form select,.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid #d8e4ef;border-radius:10px;background:#fbfdff;color:#15324e;padding:12px 13px;font:500 12px Manrope;outline:none;transition:border-color .2s,box-shadow .2s}
+.topup-form input,.topup-form select,.contact-form input,.contact-form select{height:46px}
+.topup-form input:focus,.topup-form select:focus,.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#3988e4;box-shadow:0 0 0 3px #3988e41a}
+.amount-field{border:0;padding:0;margin:0;min-width:0}.amount-field legend{font-size:11px;font-weight:800;color:#27445f;margin-bottom:10px}
+.amount-options{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.amount-option{position:relative;min-height:68px;border:1px solid #dce7f1;border-radius:12px;background:#f9fbfe;color:#193653;display:flex;align-items:center;justify-content:center;gap:3px;cursor:pointer;transition:all .2s}
+.amount-option:hover{border-color:#77a9dc;transform:translateY(-2px)}.amount-option.active{background:#edf5ff;border:1.5px solid #176bd4;box-shadow:0 6px 18px #176bd418;color:#1264c8}
+.amount-option small{font-size:9px;color:#7790a8}.amount-option b{font:800 19px Manrope}.amount-option svg{position:absolute;right:6px;top:6px;width:13px;color:#0ca99d}
+.topup-payment-note{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;background:#eef7fb;border:1px solid #dcecf3;color:#1b526a}
+.topup-payment-note>svg{width:21px;color:#0c9f96;flex:none}.topup-payment-note b,.topup-payment-note small{display:block}.topup-payment-note b{font:800 11px Manrope}.topup-payment-note small{font-size:10px;line-height:1.5;color:#698398;margin-top:4px}
+.topup-legal,.contact-privacy{display:flex;align-items:center;gap:7px;color:#8294a7;font-size:9px;line-height:1.5;margin:0}.contact-privacy svg{width:14px;flex:none;color:#0da397}
+.topup-aside{display:grid;gap:14px}.topup-aside-card{position:relative;overflow:hidden;padding:23px;border-radius:18px;border:1px solid #dfe9f2;background:#fff}.topup-aside-card.dark{background:radial-gradient(ellipse at 85% 10%,#15507b,#0b2e4e 58%,#071d35);border:0;color:#fff;min-height:275px}
+.aside-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#ffffff16;color:#73d8d0;margin-bottom:22px}.aside-icon svg{width:21px}
+.topup-aside-card .eyebrow{color:#75d9d1}.topup-aside-card h3{font:800 26px/1.12 Manrope;margin:13px 0}.topup-aside-card h3 em{font-style:normal;color:#59d2c8}.topup-aside-card p{font-size:11px;line-height:1.7;color:#b6cce0;max-width:290px}.topup-aside-card>a{position:relative;z-index:1;display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:#176bd4;font:800 10px Manrope;margin-top:12px}.topup-aside-card.dark>a{color:#70d9d1}.topup-aside-card>a svg{width:15px}.topup-aside-card:not(.dark)>b{font:800 13px Manrope;color:#183651}.topup-aside-card:not(.dark) p{color:#7b8fa4}.aside-watermark{position:absolute;right:-4px;bottom:-45px;font:900 115px Manrope;color:#ffffff0b}
+.contact-main{display:grid;grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);gap:26px;align-items:start;padding-top:60px;padding-bottom:75px}
+.contact-info{padding:23px 7px 0 0}.contact-info h2{font:800 34px/1.12 Manrope;letter-spacing:-1.5px;color:#0b2541;margin:13px 0}
+.contact-info>p{font-size:12px;line-height:1.8;color:#778da3;max-width:390px;margin-bottom:27px}
+.contact-info-item{display:flex;align-items:center;gap:13px;margin:18px 0}.contact-info-item>span{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:#e7f4ff;color:#176bd4;flex:none}.contact-info-item svg{width:20px}
+.contact-info-item b,.contact-info-item small{display:block}.contact-info-item b{font:800 11px Manrope;color:#183652}.contact-info-item small{font-size:10px;color:#8295a8;margin-top:4px;line-height:1.5}
+.contact-info-note{display:flex;gap:9px;align-items:flex-start;padding:13px;border-radius:12px;background:#e9f7f5;color:#4a7773;font-size:10px;line-height:1.6;margin-top:25px}.contact-info-note svg{width:16px;flex:none;color:#0ca99d}
+.contact-form-card{padding:30px}.contact-form{gap:15px}.contact-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 13px}.contact-form-grid .field:last-child{grid-column:1/-1}
+.contact-form textarea{resize:vertical;min-height:125px}.contact-form .btn{margin-top:2px}.contact-privacy{margin-top:0}
+.contact-chat-card{position:relative;width:250px;min-height:220px;padding:24px;border-radius:22px;background:linear-gradient(145deg,#fff,#e4f2fb);box-shadow:0 28px 60px #0005;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(4deg);animation:cardFloat 5s ease-in-out infinite;color:#13324f}
+.contact-chat-card>span{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#e3f7f4;color:#0aa397}.contact-chat-card>span svg{width:24px}.contact-chat-card>b{font:800 20px/1.2 Manrope}.contact-chat-card>small{font:800 8px Manrope;letter-spacing:1.7px;color:#8296a9}
+.chat-dots{display:flex;gap:5px}.chat-dots i{width:6px;height:6px;background:#1b9f9a;border-radius:50%;animation:glowPulse 1.2s infinite}.chat-dots i:nth-child(2){animation-delay:.2s}.chat-dots i:nth-child(3){animation-delay:.4s}
+.contact-chat-bubble{right:-2px;bottom:30px}.contact-chat-bubble svg{color:#0aa397}
+@media(max-width:900px){.topup-hero-inner,.contact-hero-inner{grid-template-columns:1fr 1fr;gap:15px}.topup-main{grid-template-columns:1fr}.topup-aside{grid-template-columns:1fr 1fr}.contact-main{grid-template-columns:1fr;gap:20px}.contact-info{padding:0}.contact-info>p{max-width:650px}}
+@media(max-width:650px){.topup-hero,.contact-hero{padding:48px 0 52px}.topup-hero-inner,.contact-hero-inner{grid-template-columns:1fr}.topup-copy h1,.contact-hero h1{font-size:43px;letter-spacing:-2px}.topup-card-art,.contact-hero-art{height:260px;margin-top:10px}.topup-orbit,.contact-orbit{width:220px;height:220px}.metro-card{width:280px;height:180px}.topup-main,.contact-main{padding-top:35px;padding-bottom:48px}.topup-form-card,.contact-form-card{padding:22px 18px;border-radius:17px}.topup-form-heading h2,.contact-form-heading h2{font-size:23px}.amount-options{grid-template-columns:repeat(3,minmax(0,1fr))}.topup-aside{grid-template-columns:1fr}.contact-form-grid{grid-template-columns:1fr}.contact-form-grid .field:last-child{grid-column:auto}.contact-info h2{font-size:29px}.contact-hero-points{gap:12px}.contact-hero-points span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.topup-orbit,.contact-orbit,.metro-card,.contact-chat-card,.chat-dots i{animation:none!important}}
