@@ -200,7 +200,7 @@ app.get('/api/admin/usuarios', auth, allow('administrador'), async (_req, res) =
 app.post('/api/admin/usuarios', auth, allow('administrador'), async (req, res) => {
   try {
     const { nombre, correo, contrasena, rol='empleado', turno='manana' } = req.body || {};
-    if (!nombre?.trim() || !/^\S+@\S+\\.\S+$/.test(correo || '') || !contrasena || contrasena.length < 8)
+    if (!nombre?.trim() || !/^\S+@\S+\.\S+$/.test(correo || '') || !contrasena || contrasena.length < 8)
       return res.status(400).json({ error: 'Completa nombre, correo válido y contraseña de al menos 8 caracteres.' });
     if (!['empleado','cajero'].includes(rol) || !['manana','tarde','noche'].includes(turno))
       return res.status(400).json({ error: 'Rol o turno no permitido.' });
@@ -264,6 +264,16 @@ app.post('/api/caja/:id/pagar', auth, allow('administrador', 'cajero', 'empleado
       VALUES (${operation}, ${id}, ${rows[0].id_usuario}, 'caja', 'efectivo', ${rows[0].monto_calculado}, ${received}, ${received - Number(rows[0].monto_calculado)}, 'aprobado', ${req.user.id}, ${turnos[0].id}, true)`;
     res.json({ operacion: operation, recarga: result[0], vuelto: received - Number(rows[0].monto_calculado) });
   } catch { res.status(500).json({ error: 'No se pudo procesar el pago de caja.' }); }
+});
+
+app.patch('/api/admin/solicitudes/:id', auth, allow('administrador','empleado'), async (req,res)=>{
+  try {
+    const id=Number(req.params.id), estado=req.body?.estado;
+    if(!Number.isInteger(id)||!['pendiente','atendido','rechazado'].includes(estado)) return res.status(400).json({error:'Estado o identificador no válido.'});
+    const rows=await sql()`UPDATE solicitudes SET estado=${estado} WHERE id=${id} RETURNING id,categoria,estado`;
+    if(!rows[0]) return res.status(404).json({error:'Solicitud no encontrada.'});
+    res.json({solicitud:rows[0]});
+  } catch { res.status(500).json({error:'No se pudo actualizar la solicitud.'}); }
 });
 
 app.get('/api/admin/solicitudes', auth, allow('administrador', 'empleado'), async (_req, res) => {
