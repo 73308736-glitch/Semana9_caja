@@ -92,6 +92,23 @@ app.post('/api/recargas', auth, async (req, res) => {
   } catch { res.status(500).json({ error: 'No se pudo registrar la recarga.' }); }
 });
 
+app.post('/api/recargas/:id/pago-simulado', auth, async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id)) return res.status(400).json({ error: 'Identificador no válido.' });
+    const db = sql();
+    const paid = await db`UPDATE recargas_tarjeta SET estado_pago = 'pagado', estado = 'pagado',
+      fecha_pago = now(), saldo_actual = COALESCE(saldo_actual, 0) + monto_calculado
+      WHERE id = ${id} AND id_usuario = ${req.user.id} AND estado_pago = 'pendiente' AND canal_pago = 'pasarela'
+      RETURNING id, codigo_seguimiento, monto_calculado, fecha_pago`;
+    if (!paid[0]) return res.status(404).json({ error: 'No se encontró una recarga digital pendiente.' });
+    const operation = 'WEB-' + Date.now().toString(36).toUpperCase();
+    await db`INSERT INTO pagos (codigo_operacion, id_registro, id_usuario, canal, metodo, monto, estado, verificado)
+      VALUES (${operation}, ${id}, ${req.user.id}, 'pasarela', 'tarjeta_debito', ${paid[0].monto_calculado}, 'aprobado', true)`;
+    res.json({ operacion: operation, recarga: paid[0], simulated: true });
+  } catch { res.status(500).json({ error: 'No se pudo completar el pago simulado.' }); }
+});
+
 app.get('/api/recargas', auth, async (req, res) => {
   try {
     const rows = req.user.rol === 'administrador' || req.user.rol === 'empleado' || req.user.rol === 'cajero'
